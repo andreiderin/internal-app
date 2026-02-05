@@ -13,3 +13,8 @@ node_modules/
 .next/
 out/
 *.log
+
+node_modules/
+.next/
+out/
+*.log
