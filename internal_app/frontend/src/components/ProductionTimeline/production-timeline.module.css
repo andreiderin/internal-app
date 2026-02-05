@@ -1,0 +1,77 @@
+.frame {
+  /* Parent scroller so rail & viewport scroll together vertically */
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  width: 100%;
+  height: 100%; /* fills parent; ensure parent gives it height */
+  min-height: 480px; /* fallback so you see something */
+  overflow: auto; /* vertical scrolling lives here */
+  background: #ffffff;
+  border: 1px solid #e9e9ef;
+  border-radius: 16px;
+}
+
+/* Left column */
+.rail {
+  position: sticky; /* prepares us for future horizontal scroll */
+  left: 0;
+  z-index: 2;
+  background: #fafbff;
+  border-right: 1px solid #ececf3;
+}
+
+.railInner {
+}
+
+/* Right column */
+.viewport {
+  position: relative;
+  background: #ffffff;
+}
+
+.canvas {
+  position: relative;
+}
+
+/* Rows */
+.row {
+  display: grid;
+  align-items: center;
+  height: 44px;
+}
+
+.rowRail {
+  grid-template-columns: 1fr auto;
+  padding: 0 12px 0 16px;
+  margin: 6px 8px; /* pill spacing */
+  border-radius: 22px; /* pill look */
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px #eef0f6;
+}
+
+.rowTrack {
+  border-bottom: 1px solid #f7f7fb;
+}
+
+.rowLabel {
+  color: #3b3f5c;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.rowChevron {
+  color: #b7bbcc;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Placeholder block on track to visualize alignment for MP1 */
+.placeholder {
+  height: 24px;
+  width: 120px;
+  border-radius: 8px;
+  background: #eef2ff;
+  margin-left: 16px;
+}
