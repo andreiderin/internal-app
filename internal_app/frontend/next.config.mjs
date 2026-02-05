@@ -2,8 +2,8 @@
 const nextConfig = {
   output: "export",
   trailingSlash: true,
-  basePath: "/navi",
-  assetPrefix: "/navi/",
+  basePath: "/internal-app",
+  assetPrefix: "/internal-app/",
   reactStrictMode: true,
 };
 
